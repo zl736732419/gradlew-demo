@@ -18,13 +18,14 @@ gradle是否存在的目录，gradle下载的地址
 
 可以在项目build.gradle文件中修改gradle-wrapper.properties中的配置参数
 
-    task {
-        gradleVersion = "5.4.1" # 下载的gradle版本
-        distributionType = "all" # 下载的gradle包类型，有两种：bin, all all包含文档已经源码jar
+    wrapper {
+        gradleVersion = "4.9" # 下载的gradle版本
+        distributionType = "bin" # 下载的gradle包类型，有两种：bin, all all包含文档已经源码jar
     }
 当配置好build.gradle之后，通过命令生成gradlew
 
-    gradle wrapper
+    gradle wrapper # 直接修改build.gradle
+    gradle wrapper --gradle-version 4.9 --distribution-type bin # 命令行指定参数
 项目发布的时候将生成的以下文件上传即可
     
     gradle

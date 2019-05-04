@@ -16,7 +16,7 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
-task {
-    gradleVersion = "5.4.1"
-    distributionType = "all"
+wrapper {
+    gradleVersion = "4.9"
+    distributionType = "bin"
 }
